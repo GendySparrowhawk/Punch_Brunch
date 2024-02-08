@@ -1,0 +1,20 @@
+.my-gradient {
+    background-image: linear-gradient(to top, #f236fd, #41d1e1);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero {
+    color: aliceblue;
+    max-height: 100vw;
+
+}
+
+.waffle {
+    display: flex;
+
+    img {
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
