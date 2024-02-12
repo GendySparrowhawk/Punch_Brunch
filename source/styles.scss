@@ -1,20 +1,122 @@
+// set glbal
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// reuseable background
 .my-gradient {
-    background-image: linear-gradient(to top, #f236fd, #41d1e1);
-    background-size: cover;
-    background-repeat: no-repeat;
+  min-height: 100%;
+  background-image: linear-gradient(to top, #f236fd, #41d1e1);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero {
-    color: aliceblue;
-    max-height: 100vw;
-
+  color: aliceblue;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+// splash page
 .waffle {
+  display: flex;
+  font-family: "Salsa", cursive;
+  position: relative;
+  .pic {
+    position: relative;
     display: flex;
+    align-items: center;
 
-    img {
-        max-width: 500px;
-        max-height: 500px;
+    .left-image,
+    .right-image {
+      max-width: 500px;
+      max-height: 500px;
+      position: absolute;
+      z-index: 0;
+      opacity: 0;
     }
+    .left-image {
+      animation-delay: 0.5s;
+      left: -200px;
+      animation: slide-in-left 1s forwards;
+    }
+    .right-image {
+      animation-delay: 0.5s;
+      right: -100px;
+      bottom: -150px;
+      animation: slide-in-right 1s forwards;
+    }
+    .punch {
+      transition: color .7s ease, transform .7s ease;
+      position: relative;
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      h1 {
+        font-size: 10rem;
+        transform: rotate(-10deg);
+        margin: 0;
+        opacity: 0;
+        animation: fade-in 0.5s forwards;
+      }
+    }
+  }
 }
+
+.punch:hover {
+    cursor: pointer;
+    color: #0e63a8;
+    transform: translateY(-10px);
+}
+
+// transition when clicked to homepage
+.fade-out-right {
+    opacity: 0;
+    transform: translateX(50%);
+}
+
+.fade-out-left {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+
+// key frame animations
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
