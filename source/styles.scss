@@ -126,6 +126,7 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
   border: black solid 2px;
   border-radius: 8px;
   box-shadow: $myShadow;
+  z-index: 2;
   img { 
     max-width: 400px;
     max-height: 200px;
@@ -161,9 +162,12 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   color: aliceblue;
+  padding: 10px;
   font-family: $myfont;
   letter-spacing: 3px;
+  z-index: 3;
   iframe {
     background-color: #0e63a8;
     color: aliceblue;
@@ -181,6 +185,7 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
 .film {
   flex: 1 1 50%;
   padding: 20px;
+  z-index: 2;
 }
 
 // rsvp form
@@ -332,10 +337,12 @@ input[type="email"] textarea {
 }
 
 // media queries 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   html,
   body {
     font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .waffle {
@@ -345,24 +352,43 @@ input[type="email"] textarea {
   .pic {
     .left-image,
     .right-image {
-      max-width: 200px;
-      max-height: 200px;
+      max-width: 150px;
+      max-height: 150px;
     }
   }
 
   .punch h1 {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  .banner {
+    img {
+      display: none;
+    }
+  }
+
+
   .RSVP,
   .film {
     flex: 1 1 100%;
+
+    iframe{ 
+      max-width: 80%;
+    }
   }
   .info {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .FYI {
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 }
 
