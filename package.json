@@ -7,6 +7,7 @@
     "dev": "npm run compile:sass && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "build": "sass ./source/styles.scss ./public/build/styles.css",
     "compile:sass": "sass ./source/styles.scss ./public/build/styles.css",
     "watch:sass": "sass --watch ./source/styles.scss build/styles.css"
   },
