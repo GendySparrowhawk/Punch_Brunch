@@ -16,11 +16,14 @@
       href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
     <title>Punch Brunch</title>
   </head>
-  <body class="my-gradient">
+  <body>
     <div class="sparkle1" style="top: 50px; left: 100px"></div>
     <div class="sparkle2" style="top: 300px; left: 60px"></div>
     <div class="sparkle1" style="top: 100px; left: -30px"></div>
@@ -54,30 +57,65 @@
           A gathering of friends for eating waffles, driniking punch and
           watching something wretched
         </h2>
+        <h3>Next Punch Brunch</h3>
+        <p>Saturday 03/02/24 11am - 3ish pm</p>
       </div>
       <img src="./assets/waffle final.png" alt="" />
     </div>
+    <div class="info">
+      <div class="RSVP">
+        <form id="mailer">
+          <h1>RSVP</h1>
 
-    <div class="menu">
-        <div class="dropdown">
-          <button class="dropdown-btn"><i class="fas fa-caret-down"></i> Past Menus</button>
-          <div class="dropdown-content" id="myDropdown">
-            <div class="menu-cards">
-              <div class="menu-card">
-                <img src="./assets/serious.webp" alt="kenji" />
-                <div class="menu-text">
-                  <h2>Brown Butter Waffles</h2>
-                  <p>
-                    A sweeter, yet not as sweet as you'd think waffle dish with the
-                    classic amount of Serious Eats prep-time
-                    <a href="https://www.seriouseats.com/brown-butter-yeast-raised-waffles-recipe" target="_blank">get the recipe</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <label for="name">Name</label><br />
+          <input type="text" id="name" name="name" />
+          <label for="email">Email</label><br />
+          <input type="text" id="email" name="email" />
+          <label for="plusOne">Number of +1s</label>
+          <input type="text" name="plusOne" id="plusOne" />
+          <label for="notes">Anything we should know, allergies, etc.</label>
+          <input type="text" name="notes" id="notes" />
+          <a href="#" id="submitForm"
+            ><img
+              id="submitImg"
+              src="./assets/waffleWhole.png"
+              alt="submit"
+            />Submit</a
+          >
+        </form>
       </div>
+      <div class="film">
+        <h2>This Month's Film</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/fipPQUXUd1k?si=s1ce1ZTdhVEV6TL-"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <h3>Wild, ain't it? Got a movie suggestion? Put it in your rsvp!</h3>
+      </div>
+    </div>
+    <div class="FYI">
+      <h2>Help keep the punch and waffles flowing, venmo Liz here</h2>
+      <a href="https://account.venmo.com/u/Liz-Moore-2"
+        ><img src="./assets/Venmo_logo.png" alt="liz-venmo"
+      /></a>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <p>Thank you! We're excited to see you! 🎉</p>
+        <button id="closeBtn">Close</button>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 Jacob Hoefer</p>
+      <a href="https://github.com/GendySparrowhawk">
+        <img src="./assets/github.png" alt="github" />
+      </a>
+    </div>
   </body>
   <script src="./script.js"></script>
 </html>
