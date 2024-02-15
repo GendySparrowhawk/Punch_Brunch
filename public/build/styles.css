@@ -163,6 +163,10 @@ body {
   box-shadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
   z-index: 2;
   border-radius: 5px;
+  transition: transform 0.4s;
+}
+.film iframe:hover {
+  transform: scale(1.05);
 }
 
 .RSVP,
@@ -171,12 +175,6 @@ body {
   padding: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  .RSVP,
-  .film {
-    flex: 1 1 100%;
-  }
-}
 #mailer {
   background-color: rgba(139, 195, 248, 0.8);
   border-radius: 8px;
@@ -313,6 +311,33 @@ input[type=email] textarea {
   max-height: 50px;
 }
 
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+  .waffle {
+    margin-top: 100px;
+  }
+  .pic .left-image,
+  .pic .right-image {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .punch h1 {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .RSVP,
+  .film {
+    flex: 1 1 100%;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+}
 @keyframes sparkle {
   0% {
     transform: scale(1);

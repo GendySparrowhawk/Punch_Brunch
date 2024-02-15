@@ -126,7 +126,7 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
   border: black solid 2px;
   border-radius: 8px;
   box-shadow: $myShadow;
-  img {
+  img { 
     max-width: 400px;
     max-height: 200px;
   }
@@ -170,6 +170,11 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
     box-shadow: $myShadow;
     z-index: 2;
     border-radius: 5px;
+    transition: transform .4s;
+  }
+
+  iframe:hover {
+    transform: scale(1.05);
   }
 }
 .RSVP,
@@ -178,12 +183,6 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
   padding: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  .RSVP,
-  .film {
-    flex: 1 1 100%;
-  }
-}
 // rsvp form
 #mailer {
   background-color: rgba(139, 195, 248, 0.8);
@@ -329,6 +328,41 @@ input[type="email"] textarea {
     padding: 10px;
     max-width: 50px;
     max-height: 50px;
+  }
+}
+
+// media queries 
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  .waffle {
+    margin-top: 100px;
+  }
+
+  .pic {
+    .left-image,
+    .right-image {
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+
+  .punch h1 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .RSVP,
+  .film {
+    flex: 1 1 100%;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
   }
 }
 
