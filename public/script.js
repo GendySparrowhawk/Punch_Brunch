@@ -1,5 +1,20 @@
 const punchText = document.getElementById("punchText");
 const brunchText = document.getElementById("brunchText");
+const targetDate = new Date(2024, 2, 2, 11, 0, 0).getTime();
+const countDown = document.querySelector("#countdown");
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  countDown.innerHTML = `Time till next brunch: ${days}d ${hours}h ${minutes}m ${seconds}s`
+}, 1000);
 
 punchText.addEventListener("click", toggleImages);
 brunchText.addEventListener("click", toggleImages);

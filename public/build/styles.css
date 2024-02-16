@@ -65,6 +65,18 @@ body {
   opacity: 0;
   animation: fade-in 0.5s forwards;
 }
+.waffle .pic .punch #tap {
+  display: none;
+}
+
+#countdown {
+  position: absolute;
+  margin-top: 30%;
+  left: 50%;
+  transform: translateX(-60%);
+  font-size: 2rem;
+  color: #0e63a8;
+}
 
 .punch:hover {
   cursor: pointer;
@@ -218,7 +230,6 @@ input[type=email] textarea {
   border: none;
   border-radius: 5px;
   background-color: rgba(225, 225, 255, 0.6);
-  width: calc(80% - 20px);
 }
 
 #submitForm {
@@ -328,16 +339,25 @@ input[type=email] textarea {
   }
   .pic .left-image,
   .pic .right-image {
-    max-width: 150px;
-    max-height: 150px;
+    display: none;
   }
-  .punch h1 {
-    font-size: 4rem;
+  #countdown {
+    padding-top: 50px;
+    text-align: center;
+  }
+  #tap {
+    display: block;
+  }
+  #punchText, #brunchText {
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 480px) {
   .banner img {
     display: none;
+  }
+  #mailer {
+    max-width: 100%;
   }
   .RSVP,
   .film {
