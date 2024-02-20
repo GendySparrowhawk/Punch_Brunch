@@ -39,12 +39,6 @@ function loadHomeContent() {
       document.open();
       document.write(data);
       document.close();
-      // const parser = new DOMParser();
-      // const newDocument = parser.parseFromString(data, "text/html");
-      // document.open();
-      // document.write(newDocument.documentElement.outerHTML);
-      // document.close();
-      // document.body.innerHTML = data;
       console.log("Event listener being attached");
       document
         .querySelector("#submitForm")
@@ -63,9 +57,12 @@ function loadHomeContent() {
           const formElement = document.querySelector("#mailer");
           const formData = new FormData(formElement);
           console.log(formData);
-          fetch("/send-email", {
+          fetch("https://formsubmit.co/jacob.hoefer@gmail.com", {
             method: "POST",
             body: formData,
+            headers: {
+              Accept: "application/json"
+            },
           })
             .then((res) => {
               if (res.ok) {

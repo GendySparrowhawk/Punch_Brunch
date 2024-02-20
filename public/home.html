@@ -64,17 +64,29 @@
     </div>
     <div class="info">
       <div class="RSVP">
-        <form id="mailer">
-          <h1>RSVP</h1>
-
-          <label for="name">Name</label><br />
-          <input type="text" id="name" name="name" />
-          <label for="email">Email</label><br />
-          <input type="text" id="email" name="email" />
-          <label for="plusOne">Number of +1s</label>
-          <input type="text" name="plusOne" id="plusOne" />
-          <label for="notes">Anything we should know, allergies, etc.</label>
-          <input type="text" name="notes" id="notes" />
+        <form
+          action="https://formsubmit.co/jacob.hoefer@gmail.com"
+          method="POST"
+          id="mailer"
+        >
+        <h1>RSVP</h1>
+        <label>
+          Name
+          <input type="text" name="email" id="email">
+        </label>
+        <label>
+          Your Email
+          <input type="text" name="email" id="email">
+        </label>
+        <label>
+          Number of +1's
+          <input type="text" name="plusOne" id="plusOne">
+        </label>
+        <label>
+          Allergies, thoughts, feels etc. 
+          <input type="text" name="notes" id="notes">
+        </label>
+               
           <a href="#" id="submitForm"
             ><img
               id="submitImg"
