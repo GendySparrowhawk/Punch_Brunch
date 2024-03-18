@@ -138,6 +138,28 @@ body {
   max-height: 200px;
 }
 
+.nav {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  max-width: 10%;
+  top: 50%;
+  left: 0;
+}
+.nav .navTab {
+  background-color: #0e63a8;
+  border-radius: 4px;
+  padding: 4px;
+}
+.nav .navTab a {
+  text-decoration: none;
+  font-family: "salsa", cursive;
+}
+
+.navTab:hover {
+  cursor: pointer;
+}
+
 .banner-text {
   align-items: center;
   justify-content: center;
@@ -348,7 +370,8 @@ input[type=email] textarea {
   #tap {
     display: block;
   }
-  #punchText, #brunchText {
+  #punchText,
+  #brunchText {
     font-size: 3rem;
   }
 }
