@@ -1,6 +1,6 @@
 const punchText = document.getElementById("punchText");
 const brunchText = document.getElementById("brunchText");
-const targetDate = new Date(2024, 2, 2, 11, 0, 0).getTime();
+const targetDate = new Date(2024, 3, 13, 11, 0, 0).getTime();
 const countDown = document.querySelector("#countdown");
 
 setInterval(() => {
@@ -57,7 +57,7 @@ function loadHomeContent() {
           const formElement = document.querySelector("#mailer");
           const formData = new FormData(formElement);
           console.log(formData);
-          fetch("https://formsubmit.co/jacob.hoefer@gmail.com", {
+          fetch("https://getform.io/f/6388ce58-e971-4876-a25c-693527db2114", {
             method: "POST",
             body: formData,
             headers: {
