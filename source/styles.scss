@@ -146,28 +146,49 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
 
 // sidenav
 .nav {
-  position: absolute;
-  z-index: 1;
-  overflow: hidden;
-  max-width: 10%;
+  position: fixed;
+  z-index: 3;
   top: 50%;
   left: 0;
 
-   .navTab {
+  .navTab {
     background-color: #0e63a8;
     border-radius: 4px;
+    margin-top: 10px;
     padding: 4px;
+    width: 40px;
+    max-height: 40px;
+    transition: width 0.3s;
 
+    img {
+      max-width: 40px;
+      max-height: 40px;
+    }
     a {
+      color: transparent;
       text-decoration: none;
       font-family: $myfont;
+      font-size: larger;
+      display: block;
+      padding: 8px;
     }
-   }
+  }
 }
 
 .navTab:hover {
-  cursor: pointer;
+ cursor: pointer;
+ width: 100px;
+ background-color: #ef43f8;
 }
+
+.navTab:hover a {
+  color: aliceblue;
+}
+
+.navTab:hover img{
+  display: none;
+}
+
 
 .banner-text {
   align-items: center;
@@ -376,8 +397,6 @@ input[type="email"] textarea {
   html,
   body {
     font-size: 14px;
-    overflow-x: hidden;
-    overflow-y: hidden;
   }
 
   .waffle {

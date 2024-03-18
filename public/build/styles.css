@@ -139,25 +139,45 @@ body {
 }
 
 .nav {
-  position: absolute;
-  z-index: 1;
-  overflow: hidden;
-  max-width: 10%;
+  position: fixed;
+  z-index: 3;
   top: 50%;
   left: 0;
 }
 .nav .navTab {
   background-color: #0e63a8;
   border-radius: 4px;
+  margin-top: 10px;
   padding: 4px;
+  width: 40px;
+  max-height: 40px;
+  transition: width 0.3s;
+}
+.nav .navTab img {
+  max-width: 40px;
+  max-height: 40px;
 }
 .nav .navTab a {
+  color: transparent;
   text-decoration: none;
   font-family: "salsa", cursive;
+  font-size: larger;
+  display: block;
+  padding: 8px;
 }
 
 .navTab:hover {
   cursor: pointer;
+  width: 100px;
+  background-color: #ef43f8;
+}
+
+.navTab:hover a {
+  color: aliceblue;
+}
+
+.navTab:hover img {
+  display: none;
 }
 
 .banner-text {
@@ -353,8 +373,6 @@ input[type=email] textarea {
   html,
   body {
     font-size: 14px;
-    overflow-x: hidden;
-    overflow-y: hidden;
   }
   .waffle {
     margin-top: 100px;
