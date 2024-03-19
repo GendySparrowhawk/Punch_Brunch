@@ -155,7 +155,7 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
 // sidenav
 .nav {
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   top: 50%;
   left: 0;
 
@@ -470,6 +470,7 @@ input[type="email"] textarea {
 }
 
 // media queries
+// general and index 
 @media only screen and (max-width: 480px) {
   html,
   body {
@@ -500,7 +501,7 @@ input[type="email"] textarea {
     font-size: 3rem;
   }
 }
-
+// home media queries
 @media screen and (max-width: 480px) {
   .banner {
     img {
@@ -531,6 +532,41 @@ input[type="email"] textarea {
     text-align: center;
     align-items: center;
     justify-content: center;
+  }
+}
+
+// movies.html queries
+@media screen and (max-width: 480px) {
+  .filmCard {
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    img {
+      max-height: 150px;
+      max-width: 100%;
+      margin: 10px auto;
+    }
+  }
+
+  .filmInfo {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .tomatoes {
+    margin-top: 5px;
+    justify-content:flex-start;
+
+    p {
+      margin: 0 5px;
+      font-size: 14px;
+    }
+
+    img {
+      max-width: 30px;
+      max-height: 30px;
+      margin-right: 5px;
+    }
   }
 }
 
