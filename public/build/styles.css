@@ -10796,6 +10796,48 @@ input[type=email] textarea {
   max-height: 50px;
 }
 
+.menuBody {
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.recipieCard {
+  display: flex;
+  align-items: center;
+  max-width: 60%;
+  margin: 20px auto;
+  border-radius: 6px;
+  box-shadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
+  background-color: #0e63a8;
+  position: relative;
+  transition: transform 0.8s ease;
+  z-index: 4;
+  color: aliceblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.recipieCard img {
+  border-radius: 8px;
+  max-height: 80%;
+  max-width: 200px;
+  margin: 10px 10px 10px;
+}
+.recipieCard .recipieLink {
+  flex: 1;
+  margin-bottom: 0;
+}
+.recipieCard .recipieLink a {
+  text-decoration: none;
+  padding-bottom: 10px;
+  color: aliceblue;
+}
+.recipieCard .recipieLink a:hover {
+  color: black;
+}
+
+.recipieCard:hover {
+  transform: scale(1.1);
+}
+
 @media only screen and (max-width: 480px) {
   html,
   body {
@@ -10874,6 +10916,25 @@ input[type=email] textarea {
     max-width: 30px;
     max-height: 30px;
     margin-right: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .recipieCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .recipieCard img {
+    max-height: 150px;
+    max-width: 100%;
+    margin: 10px auto;
+  }
+  .recipieLink {
+    margin-bottom: 10px;
+    margin-left: 10px;
   }
 }
 @keyframes sparkle {

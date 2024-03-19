@@ -384,7 +384,6 @@ input[type="email"] textarea {
 }
 
 // movies page
-
 .brunchFilms {
   margin: 10px auto;
   justify-content: center;
@@ -413,7 +412,7 @@ input[type="email"] textarea {
     margin: 10px 10px 10px;
   }
 
-   .filmInfo {
+  .filmInfo {
     flex: 1;
     margin-bottom: 0;
     a {
@@ -450,7 +449,7 @@ input[type="email"] textarea {
   transform: scale(1.1);
 }
 .filmCard img:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .footer {
@@ -469,8 +468,54 @@ input[type="email"] textarea {
   }
 }
 
+// menu page
+.menuBody {
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.recipieCard {
+  display: flex;
+  align-items: center;
+  max-width: 60%;
+  margin: 20px auto;
+  border-radius: 6px;
+  box-shadow: $myShadow;
+  background-color: #0e63a8;
+  position: relative;
+  transition: transform 0.8s ease;
+  z-index: 4;
+  color: aliceblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  img {
+    border-radius: 8px;
+    max-height: 80%;
+    max-width: 200px;
+    margin: 10px 10px 10px;
+  }
+
+  .recipieLink {
+    flex: 1;
+    margin-bottom: 0;
+    a {
+      text-decoration: none;
+      padding-bottom: 10px;
+      color: aliceblue;
+    }
+
+    a:hover {
+      color: black;
+    }
+  }
+}
+
+.recipieCard:hover {
+  transform: scale(1.1);
+}
+
 // media queries
-// general and index 
+// general and index
 @media only screen and (max-width: 480px) {
   html,
   body {
@@ -555,7 +600,7 @@ input[type="email"] textarea {
 
   .tomatoes {
     margin-top: 5px;
-    justify-content:flex-start;
+    justify-content: flex-start;
 
     p {
       margin: 0 5px;
@@ -567,6 +612,28 @@ input[type="email"] textarea {
       max-height: 30px;
       margin-right: 5px;
     }
+  }
+}
+
+// menu page media queries
+@media screen and (max-width: 480px){
+  .recipieCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    img {
+      max-height: 150px;
+      max-width: 100%;
+      margin: 10px auto;
+    }
+  }
+
+  .recipieLink {
+    margin-bottom: 10px;
+    margin-left: 10px;
   }
 }
 
