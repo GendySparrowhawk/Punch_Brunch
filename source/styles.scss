@@ -1,3 +1,9 @@
+// Import fontawesome
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+
 // set glbal
 html,
 body {
@@ -134,9 +140,11 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
   max-width: 90%;
   display: flex;
   align-items: center;
+  justify-content: center;
   border: black solid 2px;
   border-radius: 8px;
   box-shadow: $myShadow;
+  position: relative;
   z-index: 2;
   img {
     max-width: 400px;
@@ -176,19 +184,18 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
 }
 
 .navTab:hover {
- cursor: pointer;
- width: 100px;
- background-color: #ef43f8;
+  cursor: pointer;
+  width: 100px;
+  background-color: #ef43f8;
 }
 
 .navTab:hover a {
   color: aliceblue;
 }
 
-.navTab:hover img{
+.navTab:hover img {
   display: none;
 }
-
 
 .banner-text {
   align-items: center;
@@ -374,6 +381,76 @@ input[type="email"] textarea {
       color: aliceblue;
     }
   }
+}
+
+// movies page
+
+.brunchFilms {
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.filmCard {
+  display: flex;
+  align-items: center;
+  max-width: 60%;
+  margin: 20px auto;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: $myShadow;
+  background-color: #0e63a8;
+  position: relative;
+  transition: transform 0.8s ease;
+  z-index: 4;
+  color: aliceblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  img {
+    border-radius: 8px;
+    max-height: 80%;
+    max-width: 200px;
+    margin: 10px 10px 10px;
+  }
+
+   .filmInfo {
+    flex: 1;
+    margin-bottom: 0;
+    a {
+      text-decoration: none;
+      color: aliceblue;
+    }
+
+    a:hover {
+      color: black;
+    }
+  }
+
+  .tomatoes {
+    margin-top: 0;
+    display: flex;
+    align-items: baseline center;
+
+    p {
+      font-weight: bold;
+      margin: 15px 0 0;
+    }
+    img {
+      margin: 0 0;
+    }
+
+    img {
+      max-height: 40px;
+      max-width: 40px;
+    }
+  }
+}
+
+.filmCard:hover {
+  transform: scale(1.1);
+}
+.filmCard img:hover {
+    cursor: pointer;
 }
 
 .footer {
