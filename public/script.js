@@ -13,7 +13,7 @@ setInterval(() => {
   );
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  countDown.innerHTML = `Time till next brunch: ${days}d ${hours}h ${minutes}m ${seconds}s`
+  countDown.innerHTML = `Time till next brunch: ${days}d ${hours}h ${minutes}m ${seconds}s`;
 }, 1000);
 
 punchText.addEventListener("click", toggleImages);
@@ -32,6 +32,17 @@ function toggleImages() {
   setTimeout(loadHomeContent, 1000);
 }
 
+function dropdown() {
+  if (dropdownContent.classList.contains("show")) {
+    console.log("shown");
+    dropdownContent.classList.remove("show");
+    dropdownContent.classList.add("hidden");
+  } else {
+    dropdownContent.classList.remove("hidden");
+    dropdownContent.classList.add("show");
+  }
+}
+
 function loadHomeContent() {
   fetch("home.html")
     .then((res) => res.text())
@@ -40,6 +51,10 @@ function loadHomeContent() {
       document.write(data);
       document.close();
       console.log("Event listener being attached");
+      const dropdownContent = document.querySelector("#dropdownContent");
+      const dropdownToggle = document.querySelector("#dropdownToggle");
+      dropdownToggle.addEventListener("click", dropdown);
+
       document
         .querySelector("#submitForm")
         .addEventListener("click", function (e) {
@@ -61,7 +76,7 @@ function loadHomeContent() {
             method: "POST",
             body: formData,
             headers: {
-              Accept: "application/json"
+              Accept: "application/json",
             },
           })
             .then((res) => {

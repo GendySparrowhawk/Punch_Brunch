@@ -19,6 +19,14 @@ body {
 $myfont: "salsa", cursive;
 $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
 
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 // reuseable background
 .my-gradient {
   min-height: 100vh;
@@ -149,6 +157,63 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
   img {
     max-width: 400px;
     max-height: 200px;
+  }
+}
+// mobile nav hide
+.mobileNav {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 10px;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #0e63a8;
+
+  img {
+    width: 30px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+
+  .mobileNavDropdown {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background-color: #0e63a8;
+    border: 1px solid aliceblue;
+    box-shadow: $myShadow;
+    z-index: 4;
+    font-family: $myfont;
+  }
+
+  .mobileNavTab {
+    padding: 10px;
+    border-bottom: 1px solid aliceblue;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      color: aliceblue;
+      text-decoration: none;
+    }
+
+    a:active {
+      color: #000000;
+    }
+  }
+
+  .mobileNavTab:hover {
+    background-color: #ef43f8;
   }
 }
 
@@ -580,7 +645,7 @@ input[type="email"] textarea {
   }
 }
 
-// movies.html queries
+// movies.html media queries
 @media screen and (max-width: 480px) {
   .filmCard {
     max-width: 90%;
@@ -616,7 +681,7 @@ input[type="email"] textarea {
 }
 
 // menu page media queries
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
   .recipieCard {
     flex-direction: column;
     align-items: center;
@@ -634,6 +699,23 @@ input[type="email"] textarea {
   .recipieLink {
     margin-bottom: 10px;
     margin-left: 10px;
+  }
+}
+
+// navtab media queries
+@media screen and (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobileNav {
+      display: none;
   }
 }
 

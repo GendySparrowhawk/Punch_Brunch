@@ -10372,6 +10372,14 @@ body {
   background-repeat: no-repeat;
 }
 
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 .my-gradient {
   min-height: 100vh;
   min-width: 100vw;
@@ -10501,6 +10509,55 @@ body {
 .banner img {
   max-width: 400px;
   max-height: 200px;
+}
+
+.mobileNav {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 10px;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #0e63a8;
+}
+.mobileNav img {
+  width: 30px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+.mobileNav img:hover {
+  cursor: pointer;
+}
+.mobileNav .mobileNavDropdown {
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  background-color: #0e63a8;
+  border: 1px solid aliceblue;
+  box-shadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
+  z-index: 4;
+  font-family: "salsa", cursive;
+}
+.mobileNav .mobileNavTab {
+  padding: 10px;
+  border-bottom: 1px solid aliceblue;
+}
+.mobileNav .mobileNavTab:last-child {
+  border-bottom: none;
+}
+.mobileNav .mobileNavTab a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.mobileNav .mobileNavTab a:active {
+  color: #000000;
+}
+.mobileNav .mobileNavTab:hover {
+  background-color: #ef43f8;
 }
 
 .nav {
@@ -10935,6 +10992,19 @@ input[type=email] textarea {
   .recipieLink {
     margin-bottom: 10px;
     margin-left: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+  .mobileNav {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .mobileNav {
+    display: none;
   }
 }
 @keyframes sparkle {
