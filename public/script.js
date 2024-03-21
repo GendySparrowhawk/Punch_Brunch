@@ -2,6 +2,7 @@ const punchText = document.getElementById("punchText");
 const brunchText = document.getElementById("brunchText");
 const targetDate = new Date(2024, 3, 13, 11, 0, 0).getTime();
 const countDown = document.querySelector("#countdown");
+const dropdownToggle = document.querySelector("#dropdownToggle");
 
 setInterval(() => {
   const now = new Date().getTime();
@@ -18,6 +19,7 @@ setInterval(() => {
 
 punchText.addEventListener("click", toggleImages);
 brunchText.addEventListener("click", toggleImages);
+dropdownToggle.addEventListener("click", dropdown);
 
 function toggleImages() {
   console.log("clicked");
@@ -33,6 +35,7 @@ function toggleImages() {
 }
 
 function dropdown() {
+  const dropdownContent = document.querySelector("#dropdownContent");
   if (dropdownContent.classList.contains("show")) {
     console.log("shown");
     dropdownContent.classList.remove("show");

@@ -11004,7 +11004,7 @@ input[type=email] textarea {
 }
 @media (min-width: 768px) {
   .mobileNav {
-    display: none;
+    display: block;
   }
 }
 @keyframes sparkle {

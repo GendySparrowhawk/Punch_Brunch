@@ -696,10 +696,6 @@ input[type="email"] textarea {
     }
   }
 
-  .recipeCard:hover {
-
-  }
-
   .recipeLink {
     margin-bottom: 10px;
     margin-left: 10px;
@@ -719,7 +715,7 @@ input[type="email"] textarea {
 
 @media (min-width: 768px) {
   .mobileNav {
-      display: none;
+      display: block;
   }
 }
 
