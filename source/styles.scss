@@ -384,6 +384,30 @@ input[type="email"] textarea {
     transform: scale(1.2);
   }
 }
+// film request form
+#Films {
+  background-color: rgba(139, 195, 248, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    color: aliceblue;
+    font-family: $myfont;
+  }
+
+  a {
+    color: aliceblue;
+    font-family: $myfont;
+    font-size: medium;
+  }
+}
 
 .FYI {
   display: flex;
@@ -459,12 +483,11 @@ input[type="email"] textarea {
   align-items: center;
   max-width: 60%;
   margin: 20px auto;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   border-radius: 6px;
   box-shadow: $myShadow;
   background-color: #0e63a8;
   position: relative;
-  transition: transform 0.8s ease;
   z-index: 4;
   color: aliceblue;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -510,9 +533,6 @@ input[type="email"] textarea {
   }
 }
 
-.filmCard:hover {
-  transform: scale(1.1);
-}
 .filmCard img:hover {
   cursor: pointer;
 }
@@ -543,12 +563,11 @@ input[type="email"] textarea {
   display: flex;
   align-items: center;
   max-width: 60%;
-  margin: 20px auto;
+  margin: 60px auto;
   border-radius: 6px;
   box-shadow: $myShadow;
   background-color: #0e63a8;
   position: relative;
-  transition: transform 0.8s ease;
   z-index: 4;
   color: aliceblue;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -573,10 +592,6 @@ input[type="email"] textarea {
       color: black;
     }
   }
-}
-
-.recipeCard:hover {
-  transform: scale(1.1);
 }
 
 // media queries
@@ -610,9 +625,8 @@ input[type="email"] textarea {
   #brunchText {
     font-size: 3rem;
   }
-}
-// home media queries
-@media screen and (max-width: 480px) {
+
+  // home media queries
   .banner {
     img {
       display: none;
@@ -643,11 +657,12 @@ input[type="email"] textarea {
     align-items: center;
     justify-content: center;
   }
-}
 
-// movies.html media queries
-@media screen and (max-width: 480px) {
+  // movies.html media queries
   .filmCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     max-width: 90%;
     margin: 10px auto;
     padding: 10px;
@@ -678,10 +693,8 @@ input[type="email"] textarea {
       margin-right: 5px;
     }
   }
-}
 
-// menu page media queries
-@media screen and (max-width: 480px) {
+  // menu page media queries
   .recipeCard {
     flex-direction: column;
     align-items: center;
@@ -700,10 +713,8 @@ input[type="email"] textarea {
     margin-bottom: 10px;
     margin-left: 10px;
   }
-}
 
 // navtab media queries
-@media screen and (max-width: 480px) {
   .nav {
     display: none;
   }
@@ -715,7 +726,22 @@ input[type="email"] textarea {
 
 @media (min-width: 768px) {
   .mobileNav {
-      display: none;
+    display: none;
+  }
+
+  .filmCard {
+    transition: transform 0.8s ease;
+  }
+  .filmCard:hover {
+    transform: scale(1.08);
+  }
+
+  .recipeCard {
+    transition: transform 0.8s ease;
+  }
+
+  .recipeCard:hover {
+    transform: scale(1.08);
   }
 }
 
