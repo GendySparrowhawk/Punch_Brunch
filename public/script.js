@@ -1,6 +1,6 @@
 const punchText = document.getElementById("punchText");
 const brunchText = document.getElementById("brunchText");
-const targetDate = new Date(2024, 3, 13, 11, 0, 0).getTime();
+const targetDate = new Date(2024, 4, 18, 11, 0, 0).getTime();
 const countDown = document.querySelector("#countdown");
 const dropdownToggle = document.querySelector("#dropdownToggle");
 
@@ -98,7 +98,7 @@ function loadHomeContent() {
             })
             .catch((err) => {
               console.err("Error", err);
-              alert("oops jacob didnt fix this code");
+              alert("oops jacob didn't fix this code");
             });
         });
     })

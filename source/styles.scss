@@ -350,6 +350,39 @@ label {
   color: aliceblue;
   margin: 5px auto;
 }
+// restyle checkboxes 
+.checkboxOptions label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%; 
+  border: 1px solid aliceblue;
+  margin-right: 5px;
+  position: relative;
+}
+
+.checkboxOptions input[type="checkbox"]:checked + label:before {
+  background-color: #0e63a8;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.checkboxOptions input[type="checkbox"] {
+  display: none;
+}
+
+.checkboxOptions label {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 
 input[type="text"],
 input[type="email"] textarea {
@@ -358,7 +391,6 @@ input[type="email"] textarea {
   border: none;
   border-radius: 5px;
   background-color: rgba(225, 225, 255, 0.6);
-  // width: calc(80% - 20px);
 }
 
 #submitForm {
@@ -714,7 +746,7 @@ input[type="email"] textarea {
     margin-left: 10px;
   }
 
-// navtab media queries
+  // navtab media queries
   .nav {
     display: none;
   }
