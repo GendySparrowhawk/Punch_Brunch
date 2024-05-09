@@ -1,6 +1,6 @@
 const punchText = document.getElementById("punchText");
 const brunchText = document.getElementById("brunchText");
-const targetDate = new Date(2024, 5, 25, 11, 0, 0).getTime();
+const targetDate = new Date(2024, 6, 25, 11, 0, 0).getTime();
 const countDown = document.querySelector("#countdown");
 const dropdownToggle = document.querySelector("#dropdownToggle");
 
