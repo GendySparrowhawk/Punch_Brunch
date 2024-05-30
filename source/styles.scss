@@ -16,6 +16,10 @@ body {
   background-repeat: no-repeat;
 }
 
+a {
+  text-decoration: none;
+}
+
 $myfont: "salsa", cursive;
 $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
 
@@ -656,6 +660,12 @@ input[type="email"] textarea {
   #punchText,
   #brunchText {
     font-size: 3rem;
+
+    a{ 
+      text-decoration: none;
+      color: inherit;
+      font-family: $myfont;
+    }
   }
 
   // home media queries

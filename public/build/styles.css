@@ -10372,6 +10372,10 @@ body {
   background-repeat: no-repeat;
 }
 
+a {
+  text-decoration: none;
+}
+
 .show {
   display: block;
 }
@@ -10961,6 +10965,12 @@ input[type=email] textarea {
   #punchText,
   #brunchText {
     font-size: 3rem;
+  }
+  #punchText a,
+  #brunchText a {
+    text-decoration: none;
+    color: inherit;
+    font-family: "salsa", cursive;
   }
   .banner img {
     display: none;
