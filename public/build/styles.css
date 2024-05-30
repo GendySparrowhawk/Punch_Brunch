@@ -10376,6 +10376,10 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: #0e63a8;
+}
+
 .show {
   display: block;
 }
@@ -10392,91 +10396,38 @@ a {
   background-repeat: no-repeat;
 }
 
-.waffle {
+.splash {
+  position: relative;
+  margin: 20px auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "salsa", cursive;
-  position: relative;
-  margin-top: 100px;
+  font-size: 4rem;
+  z-index: 3;
 }
-.waffle .pic {
-  position: relative;
-  display: flex;
-  align-items: center;
+.splash h1 {
+  margin: 0 auto;
 }
-.waffle .pic .left-image,
-.waffle .pic .right-image {
-  max-width: 500px;
-  max-height: 500px;
-  position: absolute;
-  z-index: 0;
-  opacity: 0;
+.splash h2 {
+  margin: 0 auto;
 }
-.waffle .pic .left-image {
-  animation-delay: 0.5s;
-  left: -200px;
-  animation: slide-in-left 1s forwards;
-}
-.waffle .pic .right-image {
-  animation-delay: 0.5s;
-  right: -100px;
-  bottom: -150px;
-  animation: slide-in-right 1s forwards;
-}
-.waffle .pic .punch {
-  transition: color 0.7s ease, transform 0.7s ease;
-  position: relative;
-  z-index: 1;
-  justify-content: center;
-  align-items: center;
+.splash p {
   text-align: center;
-  margin: 0;
 }
-.waffle .pic .punch h1 {
-  font-size: 10rem;
-  transform: rotate(-10deg);
-  margin: 0;
-  opacity: 0;
-  animation: fade-in 0.5s forwards;
-}
-.waffle .pic .punch #tap {
-  display: none;
-  letter-spacing: 0.5em;
+
+.splash:hover {
+  cursor: pointer;
+  color: #ef43f8;
+  transform: translateY(-4px);
+  transition: color 0.5s ease, transform 0.5s ease;
 }
 
 #countdown {
-  position: absolute;
-  margin-top: 30%;
-  left: 50%;
-  transform: translateX(-60%);
+  font-family: "salsa", cursive;
   font-size: 2rem;
   color: #0e63a8;
-}
-
-.punch:hover {
-  cursor: pointer;
-  color: #0e63a8;
-  transform: translateY(-10px);
-}
-
-.leave-left,
-.leave-right {
-  max-width: 500px;
-  max-height: 500px;
-  position: absolute;
-  z-index: 0;
-}
-
-.leave-left {
-  left: -200px;
-  animation: fade-out-left 1s forwards;
-}
-
-.leave-right {
-  right: -100px;
-  bottom: -150px;
-  animation: fade-out-right 1s forwards;
 }
 
 .sparkle1 {
@@ -10485,7 +10436,7 @@ a {
   height: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  animation: sparkle 5s infinite;
+  animation: sparkle 2s infinite;
   z-index: 1;
 }
 
@@ -10495,7 +10446,7 @@ a {
   height: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  animation: sparkle 3s infinite;
+  animation: sparkle 5s infinite;
   z-index: 1;
 }
 
@@ -10505,6 +10456,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 128, 0.5);
   border: black solid 2px;
   border-radius: 8px;
   box-shadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
@@ -10624,6 +10576,7 @@ a {
   font-size: 2rem;
   font-style: italic;
   text-align: center;
+  letter-spacing: 0.2em;
 }
 
 .info {
@@ -10949,26 +10902,9 @@ input[type=email] textarea {
   body {
     font-size: 14px;
   }
-  .waffle {
-    margin-top: 100px;
-  }
-  .pic .left-image,
-  .pic .right-image {
-    display: none;
-  }
   #countdown {
     padding-top: 50px;
     text-align: center;
-  }
-  #punchText,
-  #brunchText {
-    font-size: 3rem;
-  }
-  #punchText a,
-  #brunchText a {
-    text-decoration: none;
-    color: inherit;
-    font-family: "salsa", cursive;
   }
   .banner img {
     display: none;

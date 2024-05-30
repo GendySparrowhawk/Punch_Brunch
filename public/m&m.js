@@ -49,3 +49,27 @@ function submit(e) {
       alert("oops jacob didnt fix this code mjs.53");
     });
 }
+
+// sparkle time
+function randomPosition(max) {
+  console.log("getting random")
+  return Math.floor(Math.random() * max);
+}
+
+function createSparkle(className, animationDuration) {
+  console.log("init create sparkel")
+  const sparkle = document.createElement("div");
+  console.log("atempting to generate")
+  sparkle.classList.add("sparkle")
+  sparkle.classList.add(className)
+  sparkle.style.top = randomPosition(window.innerHeight) + "px";
+  sparkle.style.left = randomPosition(window.innerWidth) + "px";
+  sparkle.style.animationDuration = animationDuration + "s";
+  document.body.appendChild(sparkle)
+}
+
+for (let i = 0; i < 20; i++) {
+  createSparkle("sparkle1", 2);
+  createSparkle("sparkle2", 5)
+  console.log("ran sparkle")
+}

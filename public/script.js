@@ -1,10 +1,27 @@
-const punchText = document.getElementById("punchText");
-const brunchText = document.getElementById("brunchText");
 const targetDate = new Date(2024, 5, 8, 11, 0, 0).getTime();
 const countDown = document.querySelector("#countdown");
 const dropdownToggle = document.querySelector("#dropdownToggle");
 const submitBtn = document.querySelector("#submitForm");
 const formElement = document.querySelector("#mailer");
+
+
+// sparkle time
+function randomPosition(max) {
+  console.log("getting random")
+  return Math.floor(Math.random() * max);
+}
+
+function createSparkle(className, animationDuration) {
+  console.log("init create sparkel")
+  const sparkle = document.createElement("div");
+  console.log("atempting to generate")
+  sparkle.classList.add("sparkle")
+  sparkle.classList.add(className)
+  sparkle.style.top = randomPosition(window.innerHeight) + "px";
+  sparkle.style.left = randomPosition(window.innerWidth) + "px";
+  sparkle.style.animationDuration = animationDuration + "s";
+  document.body.appendChild(sparkle)
+}
 
 // set countdown for splash page
 setInterval(() => {
@@ -20,24 +37,19 @@ setInterval(() => {
   countDown.innerHTML = `Time till next brunch: ${days}d ${hours}h ${minutes}m ${seconds}s`;
 }, 1000);
 
+for (let i = 0; i < 20; i++) {
+  createSparkle("sparkle1", 2);
+  createSparkle("sparkle2", 5)
+  console.log("ran sparkle")
+}
+
+
 // attaching event listners
-dropdownToggle.addEventListener("click", dropdown);
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
   submit();
 });
 
-function dropdown() {
-  const dropdownContent = document.querySelector("#dropdownContent");
-  if (dropdownContent.classList.contains("show")) {
-    console.log("shown");
-    dropdownContent.classList.remove("show");
-    dropdownContent.classList.add("hidden");
-  } else {
-    dropdownContent.classList.remove("hidden");
-    dropdownContent.classList.add("show");
-  }
-}
 
 function submit() {
   document
@@ -76,4 +88,18 @@ function submit() {
       console.err("Error", err);
       alert("oops jacob didn't fix this code");
     });
+}
+
+dropdownToggle.addEventListener("click", dropdown);
+
+function dropdown() {
+  const dropdownContent = document.querySelector("#dropdownContent");
+  if (dropdownContent.classList.contains("show")) {
+    console.log("shown");
+    dropdownContent.classList.remove("show");
+    dropdownContent.classList.add("hidden");
+  } else {
+    dropdownContent.classList.remove("hidden");
+    dropdownContent.classList.add("show");
+  }
 }
