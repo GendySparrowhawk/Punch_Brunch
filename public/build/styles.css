@@ -10442,6 +10442,7 @@ a {
 }
 .waffle .pic .punch #tap {
   display: none;
+  letter-spacing: 0.5em;
 }
 
 #countdown {
@@ -10958,9 +10959,6 @@ input[type=email] textarea {
   #countdown {
     padding-top: 50px;
     text-align: center;
-  }
-  #tap {
-    display: block;
   }
   #punchText,
   #brunchText {
