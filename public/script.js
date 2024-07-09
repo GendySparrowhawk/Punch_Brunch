@@ -1,4 +1,4 @@
-const targetDate = new Date(2024, 5, 8, 11, 0, 0).getTime();
+const targetDate = new Date(2024, 6, 27, 11, 0, 0).getTime();
 const countDown = document.querySelector("#countdown");
 const dropdownToggle = document.querySelector("#dropdownToggle");
 const submitBtn = document.querySelector("#submitForm");
