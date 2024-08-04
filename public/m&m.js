@@ -26,7 +26,7 @@ function createSparkle(className, animationDuration) {
 for (let i = 0; i < 20; i++) {
   createSparkle("sparkle1", 2);
   createSparkle("sparkle2", 5)
-  console.log("ran sparkle")
+  // console.log("ran sparkle")
 }
 
 submitBtn.addEventListener("click", submit);
