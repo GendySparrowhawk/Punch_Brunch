@@ -3,23 +3,25 @@ const countDown = document.querySelector("#countdown");
 const dropdownToggle = document.querySelector("#dropdownToggle");
 const submitBtn = document.querySelector("#submitForm");
 const formElement = document.querySelector("#mailer");
+const sparkleSize = 10;
 
 
 // sparkle time
 function randomPosition(max) {
   console.log("getting random")
-  return Math.floor(Math.random() * max);
+  return Math.max(0, Math.min(Math.floor(Math.random() * max), max - sparkleSize));
 }
 
 function createSparkle(className, animationDuration) {
   console.log("init create sparkel")
   const sparkle = document.createElement("div");
   console.log("atempting to generate")
-  sparkle.classList.add("sparkle")
-  sparkle.classList.add(className)
+
+  sparkle.classList.add("sparkle", className)
   sparkle.style.top = randomPosition(window.innerHeight) + "px";
   sparkle.style.left = randomPosition(window.innerWidth) + "px";
   sparkle.style.animationDuration = animationDuration + "s";
+
   document.body.appendChild(sparkle)
 }
 

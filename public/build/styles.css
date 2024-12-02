@@ -10594,7 +10594,7 @@ a:visited {
   letter-spacing: 3px;
   z-index: 3;
 }
-.film iframe {
+.film .video-box {
   background-color: #0e63a8;
   color: aliceblue;
   box-shadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
@@ -10602,7 +10602,7 @@ a:visited {
   border-radius: 5px;
   transition: transform 0.4s;
 }
-.film iframe:hover {
+.film .video-box:hover {
   transform: scale(1.05);
 }
 
@@ -10916,8 +10916,8 @@ input[type=email] textarea {
   .film {
     flex: 1 1 100%;
   }
-  .RSVP iframe,
-  .film iframe {
+  .RSVP .video-box,
+  .film .video-box {
     max-width: 80%;
   }
   .info {

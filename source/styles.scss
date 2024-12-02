@@ -257,7 +257,7 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
   font-family: $myfont;
   letter-spacing: 3px;
   z-index: 3;
-  iframe {
+  .video-box {
     background-color: #0e63a8;
     color: aliceblue;
     box-shadow: $myShadow;
@@ -266,7 +266,7 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
     transition: transform 0.4s;
   }
 
-  iframe:hover {
+  .video-box:hover {
     transform: scale(1.05);
   }
 }
@@ -615,7 +615,7 @@ input[type="email"] textarea {
   .film {
     flex: 1 1 100%;
 
-    iframe {
+    .video-box {
       max-width: 80%;
     }
   }
