@@ -264,6 +264,8 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
     z-index: 2;
     border-radius: 5px;
     transition: transform 0.4s;
+    max-width: 500px;
+    max-height: 300px;
   }
 
   .video-box:hover {
