@@ -10572,7 +10572,7 @@ a:visited {
   text-align: center;
 }
 .banner-text h2 {
-  font-size: 2rem;
+  font-size: 1rem;
   font-style: italic;
   text-align: center;
   letter-spacing: 0.2em;
@@ -10910,6 +10910,9 @@ input[type=email] textarea {
   }
   .banner img {
     display: none;
+  }
+  .banner-text h2 {
+    font-size: 1.3rem;
   }
   #mailer {
     max-width: 100%;
