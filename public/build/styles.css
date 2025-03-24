@@ -10601,6 +10601,8 @@ a:visited {
   z-index: 2;
   border-radius: 5px;
   transition: transform 0.4s;
+  max-width: 500px;
+  max-height: 300px;
 }
 .film .video-box:hover {
   transform: scale(1.05);
