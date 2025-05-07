@@ -236,7 +236,7 @@ $myShadow: 0px 7px 67px 0px rgba(0, 0, 0, 0.75);
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     font-style: italic;
     text-align: center;
     letter-spacing: .2em;
@@ -606,6 +606,12 @@ input[type="email"] textarea {
   .banner {
     img {
       display: none;
+    }
+  }
+
+  .banner-text {
+    h2 {
+      font-size: 1.3rem;
     }
   }
 
