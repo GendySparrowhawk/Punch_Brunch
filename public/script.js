@@ -1,4 +1,4 @@
-const targetDate = new Date(2025, 6, 26, 11, 0, 0).getTime();
+const targetDate = new Date(2025, 10, 8, 11, 0, 0).getTime();
 const countDown = document.querySelector("#countdown");
 const dropdownToggle = document.querySelector("#dropdownToggle");
 const submitBtn = document.querySelector("#submitForm");
@@ -8,14 +8,11 @@ const sparkleSize = 10;
 
 // sparkle time
 function randomPosition(max) {
-  console.log("getting random")
   return Math.max(0, Math.min(Math.floor(Math.random() * max), max - sparkleSize));
 }
 
 function createSparkle(className, animationDuration) {
-  console.log("init create sparkel")
   const sparkle = document.createElement("div");
-  console.log("atempting to generate")
 
   sparkle.classList.add("sparkle", className)
   sparkle.style.top = randomPosition(window.innerHeight) + "px";
@@ -29,6 +26,7 @@ function createSparkle(className, animationDuration) {
 setInterval(() => {
   const now = new Date().getTime();
   const distance = targetDate - now;
+  console.log(targetDate);
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
@@ -41,8 +39,7 @@ setInterval(() => {
 
 for (let i = 0; i < 20; i++) {
   createSparkle("sparkle1", 2);
-  createSparkle("sparkle2", 5)
-  console.log("ran sparkle")
+  createSparkle("sparkle2", 5);
 }
 
 

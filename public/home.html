@@ -1,187 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/build/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="./assets/eatwaffle.png" />
-    <title>Punch Brunch</title>
-  </head>
-  <body>
-    <div class="banner">
-      <img src="./assets/waffle final top.png" alt="" />
-      <div class="banner-text">
-        <h1>Punch Brunch!</h1>
-        <h2>
-          A gathering of friends for eating waffles, drinking punch and watching
-          something wretched. Entering your email will only add you to the punch
-          brunch newsletter and used to end you info on location and parking.
-          Come see the new house!
-        </h2>
-        <h2>Next Punch Brunch</h2>
-        <h2>Saturday 7/26/25 11am - 3ish pm</h2>
-      </div>
-      <img src="./assets/waffle final.png" alt="" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/build/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="./assets/eatwaffle.png" />
+  <title>Punch Brunch</title>
+</head>
+
+<body>
+  <div class="banner">
+    <img src="./assets/waffle final top.png" alt="" />
+    <div class="banner-text">
+      <h1>Punch Brunch!</h1>
+      <h2>
+        A gathering of friends for eating waffles, drinking punch and watching
+        something wretched. Entering your email will only add you to the punch
+        brunch newsletter and used to end you info on location and parking.
+        Come see the new house!
+      </h2>
+      <h2>Next Punch Brunch</h2>
+      <h2>Saturday 11/8/25 11am - 3ish pm</h2>
     </div>
-    <div class="info">
-      <div class="nav">
-        <div class="navTab">
-          <img src="./assets/flim.png" alt="film" />
+    <img src="./assets/waffle final.png" alt="" />
+  </div>
+  <div class="info">
+    <div class="nav">
+      <div class="navTab">
+        <img src="./assets/flim.png" alt="film" />
+        <a href="/movies.html">Movies</a>
+      </div>
+      <div class="navTab">
+        <img src="./assets/knifereal.png" alt="menu" />
+        <a href="/menu.html">Menu</a>
+      </div>
+    </div>
+
+    <div class="mobileNav">
+      <img src="./assets/bars.png" alt="bars" id="dropdownToggle" />
+      <div class="mobileNavDropdown hidden" id="dropdownContent">
+        <div class="mobileNavTab">
           <a href="/movies.html">Movies</a>
         </div>
-        <div class="navTab">
-          <img src="./assets/knifereal.png" alt="menu" />
+        <div class="mobileNavTab">
           <a href="/menu.html">Menu</a>
         </div>
       </div>
+    </div>
 
-      <div class="mobileNav">
-        <img src="./assets/bars.png" alt="bars" id="dropdownToggle" />
-        <div class="mobileNavDropdown hidden" id="dropdownContent">
-          <div class="mobileNavTab">
-            <a href="/movies.html">Movies</a>
+    <div class="RSVP">
+      <form action="https://formkeep.com/f/ec780e05791d" accept-charset="UTF-8" enctype="multipart/form-data"
+        method="POST" id="mailer">
+        <h1>RSVP</h1>
+        <label>
+          Name
+          <input type="text" name="name" id="email" placeholder="For example 'jeff'" />
+        </label>
+        <label>
+          Your Email
+          <input type="text" name="email" id="email" placeholder="for the newsletter" />
+        </label>
+        <label class="checkbox">
+          Attending?
+          <div class="checkboxOptions">
+            <input type="checkbox" name="attending" value="yes" id="attending-yes" />
+            <label for="attending-yes">yes!</label>
+
+            <input type="checkbox" name="attending" value="no" id="attending-no" />
+            <label for="attending-no">nope!</label>
+
+            <input type="checkbox" name="attending" value="maybe" id="attending-maybe" />
+            <label for="attending-maybe">*mayyyyybbeee*</label>
           </div>
-          <div class="mobileNavTab">
-            <a href="/menu.html">Menu</a>
-          </div>
-        </div>
-      </div>
+        </label>
+        <label>
+          How big is your Party?
+          <input type="text" name="plusOne" id="plusOne" placeholder="yourself included" />
+        </label>
+        <label>
+          Allergies, thoughts, feels etc.
+          <input type="text" name="message" id="message" placeholder="there will be a dog present" />
+        </label>
 
-      <div class="RSVP">
-        <form
-          action="https://formkeep.com/f/ec780e05791d"
-          accept-charset="UTF-8"
-          enctype="multipart/form-data"
-          method="POST"
-          id="mailer"
-        >
-          <h1>RSVP</h1>
-          <label>
-            Name
-            <input
-              type="text"
-              name="name"
-              id="email"
-              placeholder="For example 'jeff'"
-            />
-          </label>
-          <label>
-            Your Email
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="for the newsletter"
-            />
-          </label>
-          <label class="checkbox">
-            Attending?
-            <div class="checkboxOptions">
-              <input
-                type="checkbox"
-                name="attending"
-                value="yes"
-                id="attending-yes"
-              />
-              <label for="attending-yes">yes!</label>
-
-              <input
-                type="checkbox"
-                name="attending"
-                value="no"
-                id="attending-no"
-              />
-              <label for="attending-no">nope!</label>
-
-              <input
-                type="checkbox"
-                name="attending"
-                value="maybe"
-                id="attending-maybe"
-              />
-              <label for="attending-maybe">*mayyyyybbeee*</label>
-            </div>
-          </label>
-          <label>
-            How big is your Party?
-            <input
-              type="text"
-              name="plusOne"
-              id="plusOne"
-              placeholder="yourself included"
-            />
-          </label>
-          <label>
-            Allergies, thoughts, feels etc.
-            <input
-              type="text"
-              name="message"
-              id="message"
-              placeholder="there will be a dog present"
-            />
-          </label>
-
-          <a href="#" id="submitForm"
-            ><img
-              id="submitImg"
-              src="./assets/waffleWhole.png"
-              alt="submit"
-            />Submit</a
-          >
-        </form>
-      </div>
-      <div class="film">
-        <h2>This Month's Film</h2>
-        <iframe
-          class="video-box"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/ivIwdQBlS10?si=RbhkrJ9zn1YCEwaI"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        >
-          ></iframe
-        >
-
-        <h3>
-          Wild, ain't it? Got a movie suggestion? Check out the movies tab and
-          suggest a movie there!
-        </h3>
-      </div>
+        <a href="#" id="submitForm"><img id="submitImg" src="./assets/waffleWhole.png" alt="submit" />Submit</a>
+      </form>
     </div>
-    <div class="FYI">
-      <h2>If you are able, donations are apreciated to help keep costs down</h2>
-      <a href="https://account.venmo.com/u/Liz-Moore-2"
-        ><img src="./assets/Venmo_logo.png" alt="liz-venmo"
-      /></a>
+    <div class="film">
+      <h2>This Month's Film</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Z8ESXMnn3FY?si=1FlH0tAZjEIDCCjS"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+
+
+      <h3>
+        Wild, ain't it? Got a movie suggestion? Check out the movies tab and
+        suggest a movie there!
+      </h3>
     </div>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <p>Thank you! We're excited to see you! 🎉</p>
-        <button id="closeBtn">Close</button>
-      </div>
+  </div>
+  <div class="FYI">
+    <h2>If you are able, donations are apreciated to help keep costs down</h2>
+    <a href="https://account.venmo.com/u/Liz-Moore-2"><img src="./assets/Venmo_logo.png" alt="liz-venmo" /></a>
+  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <p>Thank you! We're excited to see you! 🎉</p>
+      <button id="closeBtn">Close</button>
     </div>
-    <div class="footer">
-      <p>&copy; 2024 Jacob Hoefer</p>
-      <a href="https://github.com/GendySparrowhawk">
-        <img src="./assets/github.png" alt="github" />
-      </a>
-    </div>
-  </body>
-  <script src="./script.js"></script>
+  </div>
+  <div class="footer">
+    <p>&copy; 2024 Jacob Hoefer</p>
+    <a href="https://github.com/GendySparrowhawk">
+      <img src="./assets/github.png" alt="github" />
+    </a>
+  </div>
+</body>
+<script src="./script.js"></script>
+
 </html>
